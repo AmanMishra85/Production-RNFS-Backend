@@ -2,12 +2,16 @@ import { comparePassword, hashPassword } from "../helpers/authHelper.js";
 import UserModel from "../models/UserModel.js";
 import JWT from "jsonwebtoken";
 import { expressjwt } from "express-jwt";
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 // middleware
 const requireSignIn = expressjwt({
-  secret: 'AKSDJFASFJASDFASDKF',
-  algorithms: ["HS256"],
+  secret: process.env.JWT_SECRET,
+  algorithms: ['HS256'],
 });
+
 
 // register user
 
