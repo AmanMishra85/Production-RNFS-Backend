@@ -1,0 +1,58 @@
+### register user
+POST http://192.168.0.101:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name":"Aman Mishra",
+    "email":"first@gamil.com",
+    "password":"amanmisash"
+}
+
+### login user
+POST http://192.168.0.101:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"Admin111"
+}
+
+### update user-data
+PUT  http://192.168.0.101:3000/api/v1/auth/update-user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njk5N2IyZDdlNzY3YWQ5YjJlMjJjOWYiLCJpYXQiOjE3MjEzNzM1MzEsImV4cCI6MTcyMTk3ODMzMX0.P0UZPSToTXZWdyIuMY1G0l7Pvhd2VwGc-WKyuXmgVfQ
+
+{
+    "email":"admin@gmail.com",
+    "password":"Password"
+}
+
+### Create-Post
+
+POST http://192.168.0.101:3000/api/v1/post/create-post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njk5N2IyZDdlNzY3YWQ5YjJlMjJjOWYiLCJpYXQiOjE3MjEzNzM1MzEsImV4cCI6MTcyMTk3ODMzMX0.P0UZPSToTXZWdyIuMY1G0l7Pvhd2VwGc-WKyuXmgVfQ
+
+{
+    "title":"I am here",
+    "description":"What about you"
+}
+
+
+
+### get All post
+GET http://192.168.0.101:3000/api/v1/post/get-all-post
+Content-Type: application/json
+
+
+
+### get user's posts
+GET http://192.168.0.101:3000/api/v1/post/get-user-post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njk5N2IyZDdlNzY3YWQ5YjJlMjJjOWYiLCJpYXQiOjE3MjEzNzM1MzEsImV4cCI6MTcyMTk3ODMzMX0.P0UZPSToTXZWdyIuMY1G0l7Pvhd2VwGc-WKyuXmgVfQ
+
+
+
+### sample-test
+GET  http://192.168.0.101:3000
+Content-type:application/json
