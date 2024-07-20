@@ -11,6 +11,7 @@ import PostRouter from "./routes/PostRoute.js";
 dotenv.config();
 
 // MONGODB Connection
+ connectDB();
 
 // REST OBJECT
 const app = express();
@@ -35,6 +36,5 @@ const PORT = process.env.PORT || 5000;
 
 // LISTEN
 app.listen(PORT, () => {
-  connectDB();
   console.log(`Server is running at port : ${PORT}`.bgBlue.white);
 });
