@@ -34,7 +34,14 @@ app.use("/api/v1/post",PostRouter)
 // PORT
 const PORT = process.env.PORT || 5000;
 
-// LISTEN
-app.listen(PORT, () => {
+// connect to db and start server
+const start = async()=>{
+ await  connectDB();
+ app.listen(PORT, () => {
   console.log(`Server is running at port : ${PORT}`.bgBlue.white);
-});
+})
+}
+
+// start
+start();
+
